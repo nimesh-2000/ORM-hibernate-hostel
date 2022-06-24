@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginContext" prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: #192a56;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostal.controller.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#487eb0" height="602.0" layoutX="43.0" layoutY="49.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-arc-height: 100; -fx-arc-width: 100;" width="662.0" />
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="171.0" layoutY="296.0" prefHeight="54.0" prefWidth="411.0" promptText="User Name" style="-fx-prompt-text-fill: white; -fx-background-color: #192a56; -fx-text-fill: white;">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPassword" alignment="CENTER" layoutX="172.0" layoutY="411.0" prefHeight="54.0" prefWidth="411.0" style="-fx-prompt-text-fill: white; -fx-background-color: #192a56; -fx-text-fill: white;">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="pwdPassword" alignment="CENTER" layoutX="171.0" layoutY="411.0" prefHeight="54.0" prefWidth="411.0" promptText="Password" style="-fx-prompt-text-fill: white; -fx-background-color: #192a56; -fx-text-fill: white;">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </PasswordField>
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="196.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/user-16.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="196.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/lock-4-16.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="171.0" layoutY="550.0" onAction="#loginOnAction" prefHeight="54.0" prefWidth="411.0" style="-fx-background-color: #192a56; -fx-text-fill: white; -fx-background-radius: 30;" text="Login">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
+      <Circle fill="WHITE" layoutX="374.0" layoutY="169.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="150.0" fitWidth="165.0" layoutX="299.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/pngwing.com.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="449.0" layoutY="170.0" opacity="0.5" prefHeight="3.0" prefWidth="98.0" />
+      <Separator layoutX="201.0" layoutY="172.0" opacity="0.5" prefHeight="3.0" prefWidth="98.0" />
+      <Text fill="WHITE" layoutX="604.0" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="version 2.0" />
+      <ImageView fx:id="visibilityOn" fitHeight="47.0" fitWidth="44.0" layoutX="596.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/photo_2022-06-21_10-22-45.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="visibiltyOff" fitHeight="47.0" fitWidth="44.0" layoutX="596.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assert/photo_2022-06-21_10-22-49.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="599.0" layoutY="415.0" onMouseEntered="#btnOnMouseEntered" onMouseExited="#btnOnMouseExited" prefHeight="44.0" prefWidth="44.0" text="  " />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fd6ff" height="64.0" layoutX="617.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="51.0" />
+      <ImageView fitHeight="64.0" fitWidth="51.0" layoutX="617.0" layoutY="81.0" onMouseClicked="#shutDownOnMouseClicked" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@assert/power_settings_new_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
