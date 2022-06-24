@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.hostal.util.NavigateUtil;
 
 import java.io.IOException;
 
@@ -22,7 +23,9 @@ public class LoginFormController {
     public ImageView visibiltyOff;
 
     public void loginOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("DashboardForm");
+        //setUi("DashboardForm");
+       // newUi(loginContext, "../view/DashboardForm.fxml");
+        NavigateUtil.newUi(loginContext, "lk/ijse/hostal/view/DashboardForm.fxml");
     }
 
     public void btnOnMouseEntered(MouseEvent mouseEvent) {

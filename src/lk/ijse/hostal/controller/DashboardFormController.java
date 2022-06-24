@@ -53,7 +53,10 @@ public class DashboardFormController {
         clock.play();
     }
 
-    public void registerOnAction(ActionEvent actionEvent) {
+    public void reservationOnAction(ActionEvent actionEvent) throws IOException {
+        dashboardContext.getChildren().clear();
+        Parent parent = FXMLLoader.load(getClass().getResource("../view/ReservationForm.fxml"));
+        dashboardContext.getChildren().add(parent);
     }
 
     public void roomsOnAction(ActionEvent actionEvent) throws IOException {

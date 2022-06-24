@@ -41,7 +41,7 @@
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="tblRoom" layoutX="52.0" layoutY="436.0" prefHeight="425.0" prefWidth="1427.0">
+      <TableView fx:id="tblRoom" layoutX="52.0" layoutY="436.0" prefHeight="425.0" prefWidth="1427.0" style="-fx-background-color: #487eb0;" stylesheets="@assert/StyleSheet/DarkMode.css">
          <columns>
             <TableColumn prefWidth="298.0" text="Room Id" />
             <TableColumn prefWidth="345.0" text="Room Type" />
