@@ -64,7 +64,7 @@
       </Label>
       <Label layoutX="167.0" layoutY="89.0" text="35" textFill="WHITE">
          <font>
-            <Font size="21.0" />
+            <Font name="System Bold" size="21.0" />
          </font>
       </Label>
       <Label layoutX="403.0" layoutY="45.0" text="RM-5467" textFill="WHITE">
@@ -79,7 +79,7 @@
       </Label>
       <Label layoutX="503.0" layoutY="88.0" text="20" textFill="WHITE">
          <font>
-            <Font size="21.0" />
+            <Font name="System Bold" size="21.0" />
          </font>
       </Label>
       <Label layoutX="719.0" layoutY="45.0" text="RM-7896" textFill="WHITE">
@@ -94,7 +94,7 @@
       </Label>
       <Label layoutX="819.0" layoutY="88.0" text="14" textFill="WHITE">
          <font>
-            <Font size="21.0" />
+            <Font name="System Bold" size="21.0" />
          </font>
       </Label>
       <Label layoutX="1058.0" layoutY="46.0" text="RM-0093" textFill="WHITE">
@@ -109,7 +109,7 @@
       </Label>
       <Label layoutX="1158.0" layoutY="89.0" text="10" textFill="WHITE">
          <font>
-            <Font size="21.0" />
+            <Font name="System Bold" size="21.0" />
          </font>
       </Label>
       <JFXButton layoutX="952.0" layoutY="346.0" onAction="#btnDeleteOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Delete" textFill="WHITE">

@@ -9,12 +9,12 @@
 <AnchorPane fx:id="mainDashboardContext" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: #487eb0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostal.controller.DashboardFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#192a56" height="897.0" layoutX="19.0" layoutY="71.0" stroke="BLACK" strokeType="INSIDE" width="291.0" />
-      <JFXButton layoutX="59.0" layoutY="300.0" onAction="#reservationOnAction" style="-fx-text-fill: white; -fx-border-color: #487eb0;" stylesheets="@assert/StyleSheet/stylesheet.css" text="Reservation">
+      <JFXButton layoutX="60.0" layoutY="428.0" onAction="#reservationOnAction" prefHeight="67.0" prefWidth="215.0" style="-fx-text-fill: white; -fx-border-color: #487eb0;" stylesheets="@assert/StyleSheet/stylesheet.css" text="Reservation">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="59.0" layoutY="407.0" onAction="#roomsOnAction" prefHeight="67.0" prefWidth="215.0" style="-fx-text-fill: white; -fx-border-color: #487eb0;" text="Rooms">
+      <JFXButton layoutX="60.0" layoutY="330.0" onAction="#roomsOnAction" prefHeight="67.0" prefWidth="215.0" style="-fx-text-fill: white; -fx-border-color: #487eb0;" text="Rooms">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -42,7 +42,7 @@
          </font>
       </JFXButton>
       <AnchorPane fx:id="dashboardContext" layoutX="348.0" layoutY="70.0" prefHeight="897.0" prefWidth="1534.0" style="-fx-background-color: white;" />
-      <JFXButton layoutX="60.0" layoutY="516.0" onAction="#studentOnAction" prefHeight="67.0" prefWidth="215.0" style="-fx-text-fill: white; -fx-border-color: #487eb0;" text="Student">
+      <JFXButton layoutX="60.0" layoutY="230.0" onAction="#studentOnAction" prefHeight="67.0" prefWidth="215.0" style="-fx-text-fill: white; -fx-border-color: #487eb0;" text="Student">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
