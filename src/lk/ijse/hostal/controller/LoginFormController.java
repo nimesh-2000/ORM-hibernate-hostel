@@ -23,9 +23,7 @@ public class LoginFormController {
     public ImageView visibiltyOff;
 
     public void loginOnAction(ActionEvent actionEvent) throws IOException {
-        //setUi("DashboardForm");
-       // newUi(loginContext, "../view/DashboardForm.fxml");
-        NavigateUtil.newUi(loginContext, "lk/ijse/hostal/view/DashboardForm.fxml");
+        NavigateUtil.newUi(loginContext, "DashboardForm");
     }
 
     public void btnOnMouseEntered(MouseEvent mouseEvent) {
@@ -34,20 +32,10 @@ public class LoginFormController {
     public void btnOnMouseExited(MouseEvent mouseEvent) {
     }
 
-    private void setUi(String location) throws IOException {
-        Stage stage=(Stage) loginContext.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(LoginFormController.class.getResource("../view/DashboardForm.fxml"))));
-        stage.centerOnScreen();
-        stage.centerOnScreen();
-        stage.show();
-    }
 
     public void shutDownOnMouseClicked(MouseEvent mouseEvent) {
-        closeForm(loginContext);
+        NavigateUtil.closeForm(loginContext);
     }
-        public static void closeForm(AnchorPane anchorPane){
-            Stage stage = (Stage) anchorPane.getScene().getWindow();
-            stage.close();
-        }
+
     }
 

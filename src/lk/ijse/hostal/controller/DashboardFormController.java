@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import lk.ijse.hostal.util.NavigateUtil;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -24,9 +25,7 @@ public class DashboardFormController {
     public Label lblTime;
     public AnchorPane dashboardContext;
     public void initialize() throws IOException {
-        dashboardContext.getChildren().clear();
-        Parent parent = FXMLLoader.load(getClass().getResource("../view/StudentForm.fxml"));
-        dashboardContext.getChildren().add(parent);
+        NavigateUtil.navigationForm(dashboardContext,"StudentForm");
         loadDateAndTime();
 //        String userName=LoginFormController.userName;
 //        lblUserName.setText(String.valueOf(userName));
@@ -54,31 +53,20 @@ public class DashboardFormController {
     }
 
     public void reservationOnAction(ActionEvent actionEvent) throws IOException {
-        dashboardContext.getChildren().clear();
-        Parent parent = FXMLLoader.load(getClass().getResource("../view/ReservationForm.fxml"));
-        dashboardContext.getChildren().add(parent);
+
+        NavigateUtil.navigationForm(dashboardContext,"ReservationForm");
     }
 
     public void roomsOnAction(ActionEvent actionEvent) throws IOException {
-        dashboardContext.getChildren().clear();
-        Parent parent = FXMLLoader.load(getClass().getResource("../view/RoomsForm.fxml"));
-        dashboardContext.getChildren().add(parent);
+        NavigateUtil.navigationForm(dashboardContext,"RoomsForm");
     }
 
     public void logOutOnAction(ActionEvent actionEvent) throws IOException {
-        setUi("LoginForm");
+        NavigateUtil.newUi(mainDashboardContext,"LoginForm");
     }
 
     public void studentOnAction(ActionEvent actionEvent) throws IOException {
-        dashboardContext.getChildren().clear();
-        Parent parent = FXMLLoader.load(getClass().getResource("../view/StudentForm.fxml"));
-        dashboardContext.getChildren().add(parent);
+        NavigateUtil.navigationForm(dashboardContext,"StudentForm");
     }
-    private void setUi(String location) throws IOException {
-        Stage stage=(Stage) mainDashboardContext.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(DashboardFormController.class.getResource("../view/LoginForm.fxml"))));
-        stage.centerOnScreen();
-        stage.centerOnScreen();
-        stage.show();
-    }
+
 }
