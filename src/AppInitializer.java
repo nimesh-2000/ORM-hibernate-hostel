@@ -19,13 +19,13 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-
-        //session.save(entity);
-
-        transaction.commit();
-        session.close();
+//        Session session = FactoryConfiguration.getInstance().getSession();
+//        Transaction transaction = session.beginTransaction();
+//
+//        //session.save(entity);
+//
+//        transaction.commit();
+//        session.close();
 
         URL resource = getClass().getResource("lk/ijse/hostal/view/LoginForm.fxml");
         Parent load = FXMLLoader.load(resource);
