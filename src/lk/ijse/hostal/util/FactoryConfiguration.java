@@ -1,6 +1,8 @@
 package lk.ijse.hostal.util;
 
 
+import lk.ijse.hostal.entity.Room;
+import lk.ijse.hostal.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -10,18 +12,29 @@ import java.util.Properties;
 
 public class FactoryConfiguration {
     private static FactoryConfiguration factoryConfiguration;
-    private final SessionFactory sessionFactory;
+    private  SessionFactory sessionFactory;
 
 
     private FactoryConfiguration() throws IOException {
-        Configuration configuration = new Configuration();
-        Properties p = new Properties();
-        p.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("hibernate.properties"));
-        configuration.setProperties(p);
+//        Configuration configuration = new Configuration();
+//        Properties p = new Properties();
+//        p.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("lk/ijse/hostal/resources/hibernate.properties"));
+//        configuration.setProperties(p);
+//        configuration.addAnnotatedClass(Student.class);
+//        configuration.addAnnotatedClass(Student.class);
+//
+//
+//
+//        sessionFactory = configuration.buildSessionFactory();
+        Properties properties  = new Properties();
+        try {
+            properties.load(ClassLoader.getSystemClassLoader().getResourceAsStream("lk/ijse/hostal/resources/hibernate.properties"));
+            Configuration configuration = new Configuration().mergeProperties(properties)
+                    .addAnnotatedClass(Student.class)
+                    .addAnnotatedClass(Room.class);
 
-
-
-        sessionFactory = configuration.buildSessionFactory();
+            sessionFactory = configuration.buildSessionFactory();
+        } catch (IOException e) {}
 
     }
 
