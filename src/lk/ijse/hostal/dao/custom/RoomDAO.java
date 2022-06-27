@@ -8,5 +8,4 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface RoomDAO extends CrudDAO<Room,String> {
-    ArrayList<Room> searchRoom(String enteredText) throws SQLException, ClassNotFoundException;
 }
