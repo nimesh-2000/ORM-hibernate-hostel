@@ -9,12 +9,12 @@ import java.util.List;
 
 public interface RoomBO extends SuperBO {
 
-    List<RoomDTO> getAllRoom() throws SQLException, ClassNotFoundException;
+    List<RoomDTO> getAllRoom() throws SQLException, ClassNotFoundException, Exception;
 
-    boolean saveRoom(RoomDTO dto) throws SQLException, ClassNotFoundException;
+    boolean saveRoom(RoomDTO dto) throws Exception;
 
-    boolean updateRoom(RoomDTO dto) throws SQLException, ClassNotFoundException;
+    boolean updateRoom(RoomDTO dto) throws Exception;
 
-    boolean deleteRoom(String id) throws SQLException, ClassNotFoundException;
+    boolean deleteRoom(String id) throws Exception;
 
 }
