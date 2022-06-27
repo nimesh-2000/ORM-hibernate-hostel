@@ -40,6 +40,14 @@
     -fx-table-cell-border-color:transparent;
     -fx-text-fill: Black;
 }
+
+
+
+.combo-box > .list-cell {
+    -fx-background: black;
+    -fx-background-color:  #192a56;
+    -fx-text-fill: white;
+}
 /*#combo{*/
 /*    -fx-prompt-text-fill: #FFFFFF;*/
 

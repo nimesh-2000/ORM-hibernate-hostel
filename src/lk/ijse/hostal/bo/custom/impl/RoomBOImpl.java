@@ -22,23 +22,14 @@ public class RoomBOImpl implements RoomBO {
         return false;
     }
 
-    @Override
-    public boolean RoomExist(String id) throws SQLException, ClassNotFoundException {
-        return false;
-    }
+
 
     @Override
     public boolean deleteRoom(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
 
-    @Override
-    public String generateNewRoomID() throws SQLException, ClassNotFoundException {
-        return null;
-    }
 
-    @Override
-    public List<RoomDTO> searchRoom(String enteredText) throws SQLException, ClassNotFoundException {
-        return null;
-    }
+
+
 }

@@ -16,7 +16,7 @@ public class StudentDAOImpl implements StudentDAO {
     @Override
     public List<Student> getAll() throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
-        String hql = "FROM Student";
+        String hql = "FROM student";
         Query query=session.createQuery(hql);
 
         List<Student>studentList = query.getResultList();
@@ -50,22 +50,16 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public Student search(String id) throws Exception {
+    public List search(String id) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
 
-        Student student = session.get(Student.class, id);
-
-        transaction.commit();
-        session.close();
-        return student;
+         String hql = "FROM student WHERE student_id = :student_Id";
+        Query query = session.createQuery(hql);
+        query.setParameter("student_Id",id);
+        List list = query.getResultList();
+        return list;
     }
 
-
-    @Override
-    public boolean exist(String id) throws Exception {
-        return false;
-    }
 
 
     @Override
@@ -82,14 +76,7 @@ public class StudentDAOImpl implements StudentDAO {
         return true;
     }
 
-    @Override
-    public String generateNewID() throws Exception {
-       return null;
-        }
 
 
-    @Override
-    public List<Student> searchStudent(String enteredText) throws SQLException, ClassNotFoundException {
-        return null;
-    }
+
 }

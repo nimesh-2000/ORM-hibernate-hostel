@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface StudentDAO extends CrudDAO<Student,String> {
 
-     List<Student> searchStudent(String enteredText) throws SQLException, ClassNotFoundException;
+//     List<Student> searchStudent(String enteredText) throws SQLException, ClassNotFoundException;
 }

@@ -24,24 +24,18 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     @Override
-    public Room search(String s) throws Exception {
+    public List search(String s) throws Exception {
         return null;
     }
 
-    @Override
-    public boolean exist(String s) throws Exception {
-        return false;
-    }
+
 
     @Override
     public boolean delete(String s) throws Exception {
         return false;
     }
 
-    @Override
-    public String generateNewID() throws Exception {
-        return null;
-    }
+
 
     @Override
     public ArrayList<Room> searchRoom(String enteredText) throws SQLException, ClassNotFoundException {

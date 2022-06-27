@@ -12,11 +12,9 @@ public interface CrudDAO<T,ID> extends SuperDAO {
 
     boolean update(T dto) throws Exception;
 
-    T search(ID id) throws Exception;
+    List search(ID id) throws Exception;
 
-    boolean exist(ID id) throws Exception;
 
     boolean delete(ID id) throws Exception;
 
-    String generateNewID() throws Exception;
 }
