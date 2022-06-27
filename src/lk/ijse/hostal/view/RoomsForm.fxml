@@ -36,7 +36,7 @@
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="949.0" layoutY="241.0" onAction="#btnDeleteOnaction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Delete" textFill="WHITE">
+      <JFXButton fx:id="btnRoomDelete" layoutX="949.0" layoutY="241.0" onAction="#btnDeleteOnaction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Delete" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
