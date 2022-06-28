@@ -1,6 +1,7 @@
 package lk.ijse.hostal.util;
 
 
+import lk.ijse.hostal.entity.Reserve;
 import lk.ijse.hostal.entity.Room;
 import lk.ijse.hostal.entity.Student;
 import org.hibernate.Session;
@@ -31,7 +32,8 @@ public class FactoryConfiguration {
             properties.load(ClassLoader.getSystemClassLoader().getResourceAsStream("lk/ijse/hostal/resources/hibernate.properties"));
             Configuration configuration = new Configuration().mergeProperties(properties)
                     .addAnnotatedClass(Student.class)
-                    .addAnnotatedClass(Room.class);
+                    .addAnnotatedClass(Room.class)
+                    .addAnnotatedClass(Reserve.class);
 
             sessionFactory = configuration.buildSessionFactory();
         } catch (IOException e) {}

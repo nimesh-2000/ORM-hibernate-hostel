@@ -28,14 +28,14 @@
          </font>
       </JFXTextField>
       <JFXComboBox fx:id="cmbRoomId" focusColor="WHITE" layoutX="53.0" layoutY="346.0" prefHeight="31.0" prefWidth="283.0" promptText="Room Id" style="-fx-font-size: 25; -fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;" />
-      <JFXButton layoutX="756.0" layoutY="346.0" onAction="#BtnReservationOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Add" textFill="WHITE">
+      <JFXButton layoutX="725.0" layoutY="346.0" onAction="#BtnReservationOnAction" prefHeight="56.0" prefWidth="217.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Add Reservation" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
       <TableView fx:id="tblRegister" layoutX="52.0" layoutY="459.0" prefHeight="425.0" prefWidth="1427.0" style="-fx-background-color: #487eb0;" stylesheets="@assert/StyleSheet/DarkMode.css">
          <columns>
-            <TableColumn prefWidth="270.0" text="Register Id" />
+            <TableColumn prefWidth="270.0" text="Reservation Id" />
             <TableColumn prefWidth="278.0" text="Student Id" />
             <TableColumn prefWidth="281.0" text="Room Id" />
             <TableColumn prefWidth="308.0" text="Date" />
@@ -112,7 +112,12 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <JFXButton layoutX="952.0" layoutY="346.0" onAction="#btnDeleteOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Delete" textFill="WHITE">
+      <JFXButton layoutX="984.0" layoutY="346.0" onAction="#btnDeleteOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1164.0" layoutY="346.0" onAction="#btnUpdateOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Update" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>

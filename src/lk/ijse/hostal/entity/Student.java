@@ -4,12 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +28,15 @@ public class Student {
     @Column(nullable = false)
     String gender;
 
-   @OneToMany(mappedBy = "Student")
-    @Cascade(CascadeType.ALL)
-    List<Room> reservationList;
+   @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
+    List<Reserve> reservationList;
+
+    public Student(String student_id, String studentName, String studentAddress, String contact_no, String dob, String gender) {
+        this.student_id = student_id;
+        this.studentName = studentName;
+        this.studentAddress = studentAddress;
+        this.contact_no = contact_no;
+        this.dob = dob;
+        this.gender = gender;
+    }
 }
