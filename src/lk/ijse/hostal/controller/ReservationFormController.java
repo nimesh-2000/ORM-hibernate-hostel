@@ -11,4 +11,9 @@ public class ReservationFormController {
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
     }
+
+    public void btnUpdateOnAction(ActionEvent actionEvent) {
+    }
+
+
 }

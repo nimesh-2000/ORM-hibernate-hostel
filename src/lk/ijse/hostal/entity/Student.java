@@ -32,7 +32,7 @@ public class Student {
     @Column(nullable = false)
     String gender;
 
-//    @OneToMany(mappedBy = "Student")
-//    @Cascade(CascadeType.ALL)
-   // List<Room> roomList = new ArrayList<>();
+   @OneToMany(mappedBy = "Student")
+    @Cascade(CascadeType.ALL)
+    List<Room> reservationList;
 }
