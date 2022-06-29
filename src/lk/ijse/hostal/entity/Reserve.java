@@ -25,4 +25,5 @@ public class Reserve {
     @JoinColumn(name = "room_type_id",referencedColumnName = "room_type_id")
     private Room room;
     String status;
+    int qty;
 }
