@@ -161,6 +161,10 @@ public class StudentFormController {
 //            return;
 //        }
 
+        //("^(C00-)[0-9]{3,5}$") id
+        //("^07(7|6|8|1|2|5|0|4)-[0-9]{7}$"); contact
+        //^\d{4}-\d{2}-\d{2}$ dob
+
         try {
             if (btnSave.getText().equalsIgnoreCase("save")) {
                 if (studentBO.saveStudent(new StudentDTO(studentId, studentName, address, contactNo, dob, gender))) {

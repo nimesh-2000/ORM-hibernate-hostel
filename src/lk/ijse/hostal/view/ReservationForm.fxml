@@ -122,5 +122,10 @@
             <Font size="25.0" />
          </font>
       </JFXButton>
+      <JFXTextField fx:id="txtReservationId" focusColor="WHITE" labelFloat="true" layoutX="51.0" layoutY="164.0" promptText="Reservation Id" style="-fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>
