@@ -32,6 +32,8 @@ public class StudentFormController {
     public TableView<StudentTM> tblStudent;
     private final StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STUDENT);
     public JFXButton btnDelete;
+    public AnchorPane keyMoneyContext;
+    public TableView tblKeyMoney;
 
     public void initialize() {
         tblStudent.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("studentId"));

@@ -106,7 +106,7 @@ public class UserFormController {
         String userName = txtUserName.getText();
         String password = txtPassword.getText();
 
-        if (!userId.matches("^(S00-)[0-9]{3,5}$")) {
+        if (!userId.matches("^(U00-)[0-9]{3,5}$")) {
             new Alert(Alert.AlertType.ERROR, "Invalid User Id").show();
             txtUserId.requestFocus();
             return;
