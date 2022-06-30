@@ -108,4 +108,14 @@ public class ReserveBOImpl implements ReserveBO {
         return reserveDAO.getReservationId();
     }
 
+    @Override
+    public List<ReserveDTO> remainKeyMoneyStudents() throws Exception {
+        List<Reserve> reservationList = reserveDAO.remainKeyMoneyStudents();
+        List<ReserveDTO>reservationDTOS = new ArrayList<>();
+        for (Reserve reservation:reservationList) {
+            reservationDTOS.add(new ReserveDTO(reservation.getRes_id(),reservation.getDate(),reservation.getStudent(),reservation.getRoom(),reservation.getStatus(),reservation.getQty()));
+        }
+        return reservationDTOS;
+    }
+
 }

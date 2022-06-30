@@ -9,4 +9,5 @@ public interface ReserveDAO extends CrudDAO<Reserve,String> {
 
     List<Reserve> searchReserve(String enteredText)throws Exception;
      String getReservationId() throws Exception;
+    List<Reserve> remainKeyMoneyStudents() throws Exception;
 }
