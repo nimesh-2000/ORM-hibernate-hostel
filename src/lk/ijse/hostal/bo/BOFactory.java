@@ -3,6 +3,7 @@ package lk.ijse.hostal.bo;
 import lk.ijse.hostal.bo.custom.impl.ReserveBOImpl;
 import lk.ijse.hostal.bo.custom.impl.RoomBOImpl;
 import lk.ijse.hostal.bo.custom.impl.StudentBOImpl;
+import lk.ijse.hostal.bo.custom.impl.UserBOImpl;
 
 public class BOFactory {
 
@@ -26,12 +27,14 @@ public class BOFactory {
                 return new RoomBOImpl();
             case RESERVE:
                 return new ReserveBOImpl();
+            case USER:
+                return new UserBOImpl();
             default:
                 return null;
         }
     }
 
     public enum BOTypes {
-        STUDENT,ROOM,RESERVE
+        STUDENT,ROOM,RESERVE,USER
     }
 }
