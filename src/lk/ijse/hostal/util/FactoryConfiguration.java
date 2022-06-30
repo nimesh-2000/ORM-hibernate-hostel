@@ -4,6 +4,7 @@ package lk.ijse.hostal.util;
 import lk.ijse.hostal.entity.Reserve;
 import lk.ijse.hostal.entity.Room;
 import lk.ijse.hostal.entity.Student;
+import lk.ijse.hostal.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -33,7 +34,8 @@ public class FactoryConfiguration {
             Configuration configuration = new Configuration().mergeProperties(properties)
                     .addAnnotatedClass(Student.class)
                     .addAnnotatedClass(Room.class)
-                    .addAnnotatedClass(Reserve.class);
+                    .addAnnotatedClass(Reserve.class)
+                    .addAnnotatedClass(User.class);
 
             sessionFactory = configuration.buildSessionFactory();
         } catch (IOException e) {}
