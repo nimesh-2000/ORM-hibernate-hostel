@@ -69,4 +69,10 @@ public class DashboardFormController {
         NavigateUtil.navigationForm(dashboardContext,"StudentForm");
     }
 
+    public void detailsOnAction(ActionEvent actionEvent) {
+    }
+
+    public void userOnAction(ActionEvent actionEvent) throws IOException {
+        NavigateUtil.navigationForm(dashboardContext,"UserForm");
+    }
 }

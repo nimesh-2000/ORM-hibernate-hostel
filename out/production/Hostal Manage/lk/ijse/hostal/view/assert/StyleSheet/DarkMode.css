@@ -48,7 +48,13 @@
     -fx-background-color:  #192a56;
     -fx-text-fill: white;
 }
-/*#combo{*/
+
+.roundButton{
+-fx-background-radius: 10em;
+-fx-min-width: 10px;
+-fx-min-height: 10px;
+-fx-max-width: 100px;
+-fx-max-height: 100px;}
 /*    -fx-prompt-text-fill: #FFFFFF;*/
 
 
