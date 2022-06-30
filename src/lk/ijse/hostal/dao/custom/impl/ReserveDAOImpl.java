@@ -81,6 +81,8 @@ public class ReserveDAOImpl implements ReserveDAO {
         List<String> list = session.createQuery("SELECT res_id FROM Reserve ORDER BY res_id DESC").setMaxResults(1).list();
         transaction.commit();
         session.close();
-        return list.size()>0? String.format("#R%03d",Integer.parseInt(list.get(0).replace("#R",""))+1):"#R001";
+        return list.size()>0? String.format("RES-%03d", (Integer.parseInt(list.get(0).replace("RES-", "")) + 1)) : "RES-001";
+
+
     }
 }

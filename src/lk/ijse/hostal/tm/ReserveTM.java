@@ -15,6 +15,6 @@ public class ReserveTM {
         String roomId;
         LocalDate date;
         String status;
-        Button btn;
+        int qty;
 
 }

@@ -29,7 +29,7 @@
          </font>
       </JFXTextField>
       <JFXComboBox fx:id="cmbRoomId" focusColor="WHITE" layoutX="53.0" layoutY="346.0" prefHeight="31.0" prefWidth="283.0" promptText="Room Id" style="-fx-font-size: 25; -fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;" stylesheets="@assert/StyleSheet/DarkMode.css" />
-      <JFXButton layoutX="725.0" layoutY="346.0" onAction="#BtnReservationOnAction" prefHeight="56.0" prefWidth="217.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Add Reservation" textFill="WHITE">
+      <JFXButton fx:id="btnReservation" layoutX="725.0" layoutY="346.0" onAction="#BtnReservationOnAction" prefHeight="56.0" prefWidth="217.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Add Reservation" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
@@ -40,8 +40,9 @@
             <TableColumn prefWidth="233.0" text="Student Id" />
             <TableColumn prefWidth="255.0" text="Room Id" />
             <TableColumn prefWidth="271.0" text="Date" />
-            <TableColumn prefWidth="249.0" text="Status" />
-            <TableColumn prefWidth="199.0" text="Delete" />
+            <TableColumn prefWidth="168.0" text="Status" />
+            <TableColumn prefWidth="151.0" text="Qty" />
+            <TableColumn prefWidth="129.0" text="Delete" />
          </columns>
       </TableView>
       <JFXComboBox fx:id="cmbStudentId" focusColor="WHITE" layoutX="53.0" layoutY="250.0" prefHeight="31.0" prefWidth="283.0" promptText="Student Id" style="-fx-font-size: 25; -fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;" stylesheets="@assert/StyleSheet/DarkMode.css" />
@@ -66,11 +67,6 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <JFXButton layoutX="1164.0" layoutY="346.0" onAction="#btnUpdateOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Update" textFill="WHITE">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </JFXButton>
       <JFXTextField fx:id="txtReservationId" focusColor="WHITE" labelFloat="true" layoutX="51.0" layoutY="164.0" promptText="Reservation Id" style="-fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;">
          <font>
             <Font size="25.0" />
@@ -87,6 +83,11 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearch" layoutX="380.0" layoutY="177.0" onKeyReleased="#searchOnKeyReleased" prefHeight="31.0" prefWidth="391.0" promptText="Search" style="-fx-background-color: blue;" />
+      <TextField fx:id="txtSearch" layoutX="380.0" layoutY="163.0" onKeyReleased="#searchOnKeyReleased" prefHeight="45.0" prefWidth="464.0" promptText="Search" style="-fx-background-color: white; -fx-background-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" />
+      <JFXTextField fx:id="txtQty" focusColor="WHITE" labelFloat="true" layoutX="1357.0" layoutY="248.0" prefHeight="56.0" prefWidth="149.0" promptText="Qty" style="-fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>

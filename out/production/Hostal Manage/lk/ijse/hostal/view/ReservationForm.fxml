@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -27,100 +28,66 @@
             <Font size="25.0" />
          </font>
       </JFXTextField>
-      <JFXComboBox fx:id="cmbRoomId" focusColor="WHITE" layoutX="53.0" layoutY="346.0" prefHeight="31.0" prefWidth="283.0" promptText="Room Id" style="-fx-font-size: 25; -fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;" />
-      <JFXButton layoutX="725.0" layoutY="346.0" onAction="#BtnReservationOnAction" prefHeight="56.0" prefWidth="217.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Add Reservation" textFill="WHITE">
+      <JFXComboBox fx:id="cmbRoomId" focusColor="WHITE" layoutX="53.0" layoutY="346.0" prefHeight="31.0" prefWidth="283.0" promptText="Room Id" style="-fx-font-size: 25; -fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;" stylesheets="@assert/StyleSheet/DarkMode.css" />
+      <JFXButton fx:id="btnReservation" layoutX="725.0" layoutY="346.0" onAction="#BtnReservationOnAction" prefHeight="56.0" prefWidth="217.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Add Reservation" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
       <TableView fx:id="tblRegister" layoutX="52.0" layoutY="459.0" prefHeight="425.0" prefWidth="1427.0" style="-fx-background-color: #487eb0;" stylesheets="@assert/StyleSheet/DarkMode.css">
          <columns>
-            <TableColumn prefWidth="270.0" text="Reservation Id" />
-            <TableColumn prefWidth="278.0" text="Student Id" />
-            <TableColumn prefWidth="281.0" text="Room Id" />
-            <TableColumn prefWidth="308.0" text="Date" />
-            <TableColumn prefWidth="289.0" text="Status" />
+            <TableColumn prefWidth="219.0" text="Reservation Id" />
+            <TableColumn prefWidth="233.0" text="Student Id" />
+            <TableColumn prefWidth="255.0" text="Room Id" />
+            <TableColumn prefWidth="271.0" text="Date" />
+            <TableColumn prefWidth="168.0" text="Status" />
+            <TableColumn prefWidth="151.0" text="Qty" />
+            <TableColumn prefWidth="129.0" text="Delete" />
          </columns>
       </TableView>
-      <JFXComboBox fx:id="cmbStudentId" focusColor="WHITE" layoutX="53.0" layoutY="250.0" prefHeight="31.0" prefWidth="283.0" promptText="Student Id" style="-fx-font-size: 25; -fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;" />
+      <JFXComboBox fx:id="cmbStudentId" focusColor="WHITE" layoutX="53.0" layoutY="250.0" prefHeight="31.0" prefWidth="283.0" promptText="Student Id" style="-fx-font-size: 25; -fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;" stylesheets="@assert/StyleSheet/DarkMode.css" />
       <JFXTextField fx:id="txtStudentName" focusColor="WHITE" labelFloat="true" layoutX="380.0" layoutY="250.0" promptText="Student Name" style="-fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;">
          <font>
             <Font size="25.0" />
          </font>
       </JFXTextField>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#487eb0" height="108.0" layoutX="46.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#487eb0" height="108.0" layoutX="373.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#487eb0" height="108.0" layoutX="700.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#487eb0" height="108.0" layoutX="1016.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
-      <Label layoutX="71.0" layoutY="46.0" text="RM-1324" textFill="WHITE">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#487eb0" height="108.0" layoutX="54.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
+      <Label fx:id="lblRoomId" layoutX="79.0" layoutY="46.0" text="RoomId" textFill="WHITE">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="214.0" layoutY="46.0" text="Non-AC" textFill="WHITE">
+      <Label fx:id="lblRoomType" layoutX="222.0" layoutY="46.0" text="Type" textFill="WHITE">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="167.0" layoutY="89.0" text="35" textFill="WHITE">
+      <Label fx:id="LblRoomQty" layoutX="175.0" layoutY="89.0" text="Qty" textFill="WHITE">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="403.0" layoutY="45.0" text="RM-5467" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="519.0" layoutY="45.0" text="Non-AC/Food" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="503.0" layoutY="88.0" text="20" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="719.0" layoutY="45.0" text="RM-7896" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="901.0" layoutY="45.0" text="AC" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="819.0" layoutY="88.0" text="14" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="1058.0" layoutY="46.0" text="RM-0093" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="1204.0" layoutY="46.0" text="Ac/Food" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="1158.0" layoutY="89.0" text="10" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Label>
-      <JFXButton layoutX="984.0" layoutY="346.0" onAction="#btnDeleteOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Delete" textFill="WHITE">
+      <JFXTextField fx:id="txtReservationId" focusColor="WHITE" labelFloat="true" layoutX="51.0" layoutY="164.0" promptText="Reservation Id" style="-fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;">
          <font>
             <Font size="25.0" />
          </font>
-      </JFXButton>
-      <JFXButton layoutX="1164.0" layoutY="346.0" onAction="#btnUpdateOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-border-color: #487eb0; -fx-background-color: #487eb0;" text="Update" textFill="WHITE">
+      </JFXTextField>
+      <Label fx:id="lblDate" layoutX="1325.0" layoutY="74.0" text="3/12/2022" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#487eb0" height="108.0" layoutX="372.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
+      <Label fx:id="lblAvailable" layoutX="433.0" layoutY="63.0" text="Availability" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="380.0" layoutY="163.0" onKeyReleased="#searchOnKeyReleased" prefHeight="45.0" prefWidth="464.0" promptText="Search" style="-fx-background-color: white; -fx-background-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" />
+      <JFXTextField fx:id="txtQty" focusColor="WHITE" labelFloat="true" layoutX="1357.0" layoutY="248.0" prefHeight="56.0" prefWidth="149.0" promptText="Qty" style="-fx-prompt-text-fill: white; -fx-text-fill: white; -fx-border-color: #487eb0;">
          <font>
             <Font size="25.0" />
          </font>
-      </JFXButton>
+      </JFXTextField>
    </children>
 </AnchorPane>
