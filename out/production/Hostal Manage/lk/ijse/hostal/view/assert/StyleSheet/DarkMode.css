@@ -21,6 +21,20 @@
     -fx-font-weight: none;
 
 }
+.column{
+
+    -fx-text-fill: red;
+    -fx-font-style: Italic;
+
+
+}
+/*.label {*/
+/*    -fx-stroke: lightseagreen;*/
+/*    -fx-text-fill: green;*/
+/*    -fx-stroke-width: 3px;*/
+
+/*}*/
+
 
 .list-cell:even,
 .list-cell:odd,

@@ -75,4 +75,13 @@ public class UserDAOImpl implements UserDAO {
         return true;
     }
 
+    @Override
+    public User searchUser(String id) throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+
+        User user = session.find(User.class, id);
+
+        session.close();
+        return user;
+    }
 }

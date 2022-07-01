@@ -38,4 +38,9 @@ public class UserBOImpl implements UserBO {
     public boolean deleteUser(String id) throws Exception {
         return userDAO.delete(id);
     }
+
+    @Override
+    public User searchUser(String id) throws Exception {
+        return userDAO.searchUser(id);
+    }
 }

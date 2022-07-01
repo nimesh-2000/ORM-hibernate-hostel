@@ -33,6 +33,8 @@ public class RoomBOImpl implements RoomBO {
 
     }
 
+
+
     @Override
     public List<RoomDTO> getAllRoom() throws Exception {
         List<Room> all = roomDAO.getAll();

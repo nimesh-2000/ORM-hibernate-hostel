@@ -3,6 +3,7 @@ package lk.ijse.hostal.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import javafx.animation.RotateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,6 +11,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 import lk.ijse.hostal.bo.BOFactory;
 import lk.ijse.hostal.bo.custom.StudentBO;
 import lk.ijse.hostal.dto.StudentDTO;
@@ -34,8 +37,13 @@ public class StudentFormController {
     public JFXButton btnDelete;
     public AnchorPane keyMoneyContext;
     public TableView tblKeyMoney;
+    public Circle c1;
+    public Circle c2;
+    public Circle c3;
+    public Circle c4;
 
     public void initialize() {
+
         tblStudent.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("studentId"));
         tblStudent.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("studentName"));
         tblStudent.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("address"));
@@ -166,9 +174,7 @@ public class StudentFormController {
             return;
         }
 
-        //("^(C00-)[0-9]{3,5}$") id
-        //("^07(7|6|8|1|2|5|0|4)-[0-9]{7}$"); contact
-        //^\d{4}-\d{2}-\d{2}$ dob
+
 
         try {
             if (btnSave.getText().equalsIgnoreCase("save")) {
@@ -184,7 +190,6 @@ public class StudentFormController {
 
             } else {
                 studentBO.updateStudent(new StudentDTO(studentId, studentName, address, contactNo, dob, gender));
-
                 StudentTM selectedStudent = tblStudent.getSelectionModel().getSelectedItem();
                 selectedStudent.setStudentId(studentId);
                 selectedStudent.setStudentName(studentName);
@@ -216,4 +221,5 @@ public class StudentFormController {
             new Alert(Alert.AlertType.ERROR, "Something Happened. try again carefully!").showAndWait();
         }
     }
+
 }

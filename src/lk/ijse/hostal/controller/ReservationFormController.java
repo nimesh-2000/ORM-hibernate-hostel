@@ -24,7 +24,10 @@ import lk.ijse.hostal.entity.Student;
 import lk.ijse.hostal.tm.ReserveTM;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.net.SocketTimeoutException;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -69,6 +72,8 @@ public class ReservationFormController {
                             new Alert(Alert.AlertType.CONFIRMATION, "Deleted.....").show();
                             tblRegister.getItems().remove(param.getValue());
                             tblRegister.getSelectionModel().clearSelection();
+
+
 
                         } else {
 
@@ -126,8 +131,7 @@ public class ReservationFormController {
                         lblRoomType.setText(dto.getType());
                         txtRoomType.setText(dto.getType());
                         txtKeyMoney.setText(dto.getKey_money().setScale(2).toString());
-                        Optional<ReserveTM> optOrderDetail = tblRegister.getItems().stream().filter(detail -> detail.getRoomId().equals(newValue)).findFirst();
-                        LblRoomQty.setText((optOrderDetail.isPresent() ? dto.getQty() - optOrderDetail.get().getQty() : dto.getQty()) + "");
+                        LblRoomQty.setText(String.valueOf(dto.getQty()-roomQtyManage(dto.getRoom_type_id())));
                         if (dto.getQty() > 0) {
                             lblAvailable.setText("Available");
                             lblAvailable.setTextFill(Color.web("#26ff00"));
@@ -191,6 +195,17 @@ public class ReservationFormController {
             e.printStackTrace();
         }
     }
+    private int roomQtyManage(String m) throws Exception {
+        int r=0;
+        ObservableList<ReserveTM> ob=tblRegister.getItems();
+        for (ReserveTM tm:ob
+        ) {
+            if (tm.getRoomId().equals(m)){
+                r+=tm.getQty();
+            }
+        }
+        return r;
+    }
 
     private void loadAllStudentId() throws Exception {
         try {
@@ -228,6 +243,8 @@ public class ReservationFormController {
     }
 
     public void BtnReservationOnAction(ActionEvent actionEvent) throws Exception {
+
+        int x=Integer.parseInt(txtQty.getText());;
         Student s1 = new Student();
         s1.setStudent_id(cmbStudentId.getValue());
 
@@ -236,7 +253,6 @@ public class ReservationFormController {
 
         if (!btnReservation.getText().equals("Update")){
             reserveBO.save(new ReserveDTO(txtReservationId.getText(), LocalDate.now(), s1, r1, txtStatus.getText(), Integer.parseInt(txtQty.getText())));
-
             cmbStudentId.setValue(null);
             cmbRoomId.setValue(null);
             txtQty.clear();
@@ -246,10 +262,15 @@ public class ReservationFormController {
             btnReservation.setText("Reserved");
             reserveBO.UpdateReservation(new ReserveDTO(txtReservationId.getText(), LocalDate.now(), s1, r1, txtStatus.getText(), Integer.parseInt(txtQty.getText())));
         }
+
         loadAllReservation();
         reservationId = generateNewReservationId();
         txtReservationId.setText( reservationId);
-    }
+        LblRoomQty.setText(String.valueOf(Integer.valueOf(LblRoomQty.getText())-x));
+        }
+
+
+
 
 
 

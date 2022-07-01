@@ -1,9 +1,12 @@
 package lk.ijse.hostal.controller;
 
+import javafx.animation.RotateTransition;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 import lk.ijse.hostal.bo.BOFactory;
 import lk.ijse.hostal.bo.custom.ReserveBO;
 import lk.ijse.hostal.dto.ReserveDTO;
@@ -21,7 +24,13 @@ public class RemainKeyFormController {
     public TableView<RemainKeyTM> tblKeyMoney;
 
     private final ReserveBO reserveBO = (ReserveBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.RESERVE);
+    public Circle c4;
+    public Circle c3;
+    public Circle c2;
+    public Circle c1;
+
     public void initialize() {
+
         tblKeyMoney.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("res_Id"));
         tblKeyMoney.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("date"));
         tblKeyMoney.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("student_id"));
@@ -53,4 +62,5 @@ public class RemainKeyFormController {
             e.printStackTrace();
         }
     }
+
 }

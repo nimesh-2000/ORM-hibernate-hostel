@@ -17,4 +17,5 @@ public interface RoomBO extends SuperBO {
 
     boolean deleteRoom(String id) throws Exception;
 
+
 }

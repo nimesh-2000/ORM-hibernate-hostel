@@ -3,6 +3,7 @@ package lk.ijse.hostal.bo.custom;
 import lk.ijse.hostal.bo.SuperBO;
 import lk.ijse.hostal.dto.StudentDTO;
 import lk.ijse.hostal.dto.UserDTO;
+import lk.ijse.hostal.entity.User;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface UserBO extends SuperBO {
 
 
     boolean deleteUser(String id) throws Exception;
+
+    User searchUser(String id) throws Exception;
 }
